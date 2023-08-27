@@ -36,6 +36,8 @@ pub fn clear_bss() {
 /// the rust entry-point of os
 #[no_mangle]
 pub fn rust_main() -> ! {
+    let start="starting";
+    println!("{}",start);
     extern "C" {
         fn stext(); // begin addr of text segment
         fn etext(); // end addr of text segment
